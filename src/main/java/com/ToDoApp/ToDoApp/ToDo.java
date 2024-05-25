@@ -3,8 +3,8 @@ package com.ToDoApp.ToDoApp;
 import lombok.Data;
 
 @Data
-public class ToDoModel {
-    long id;
+public class ToDo {
+    Long id;
     String description;
     Boolean isCompleted;
 }
