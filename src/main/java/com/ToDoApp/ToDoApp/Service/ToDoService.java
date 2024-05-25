@@ -1,6 +1,7 @@
-package com.ToDoApp.ToDoApp;
+package com.ToDoApp.ToDoApp.Service;
 
-import jakarta.persistence.Access;
+import com.ToDoApp.ToDoApp.Model.ToDo;
+import com.ToDoApp.ToDoApp.Repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
