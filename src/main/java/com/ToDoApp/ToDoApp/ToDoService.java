@@ -7,5 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ToDoService {
 
+    @Autowired
+    ToDoRepository toDoRepository;
 
+    public ToDo addToDo(ToDo toDo){
+        return toDoRepository.save(toDo);
+    }
 }
