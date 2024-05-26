@@ -23,6 +23,7 @@ public class ToDoController {
         return toDoService.addToDo(toDo);
     }
 
+    @PatchMapping("complete")
     public String isComplete(@RequestParam Long id){
         toDoService.isComplete(id);
 
