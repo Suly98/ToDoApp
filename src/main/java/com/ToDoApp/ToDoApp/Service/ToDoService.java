@@ -25,11 +25,12 @@ public class ToDoService {
     }
 
     public String toDeleteById(Long id){
-        ToDo todo = toDoRepository.getReferenceById(id);
-
-        toDeleteById(id);
-        toDoRepository.save(todo);
-        return  "Deletion Success";
+        if(toDoRepository.existsById(id)){
+            toDoRepository.deleteById(id);
+            return "Deletion Success";
+        } else {
+            return "ToDo id does not exist";
+        }
     }
 
 }
