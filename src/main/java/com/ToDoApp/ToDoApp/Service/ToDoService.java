@@ -15,4 +15,13 @@ public class ToDoService {
     public ToDo addToDo(ToDo toDo){
         return toDoRepository.save(toDo);
     }
+
+    public String isComplete(Long id){
+        ToDo toDo = toDoRepository.getReferenceById(id);
+        toDo.setIsCompleted(true);
+        toDoRepository.save(toDo);
+
+        return "Success";
+    }
+
 }
