@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ToDoRepository extends JpaRepository<ToDo,Long> {
 
-    @Query("DELETE t FROM todoapp t WHERE t.id =:ID")
-    ToDo deleteByID(@Param("ID") Long id);
+    void deleteById(@Param("ID") Long id);
 }
