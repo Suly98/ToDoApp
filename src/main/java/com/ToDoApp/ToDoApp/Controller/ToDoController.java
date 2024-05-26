@@ -16,4 +16,9 @@ public class ToDoController {
     public ToDo addToDo(@RequestBody ToDo toDo){
         return toDoService.addToDo(toDo);
     }
+
+    @GetMapping("get")
+    public ToDo getToDo(ToDo toDo){
+        return toDoService.addToDo(toDo);
+    }
 }
