@@ -29,4 +29,10 @@ public class ToDoController {
 
         return "Success";
     }
+
+    @PostMapping("delete")
+    public String toDeleteById(@RequestParam Long id){
+        toDoService.toDeleteById(id);
+        return "Deletion is Success";
+    }
 }
