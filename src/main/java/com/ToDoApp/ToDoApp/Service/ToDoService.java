@@ -24,4 +24,12 @@ public class ToDoService {
         return "Success";
     }
 
+    public String toDeleteById(Long id){
+        ToDo todo = toDoRepository.getReferenceById(id);
+
+        toDeleteById(id);
+        toDoRepository.save(todo);
+        return  "Deletion Success";
+    }
+
 }
