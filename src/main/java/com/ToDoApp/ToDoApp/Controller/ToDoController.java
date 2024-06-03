@@ -6,6 +6,8 @@ import com.ToDoApp.ToDoApp.Service.ToDoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("todo")
 public class ToDoController {
@@ -21,6 +23,11 @@ public class ToDoController {
     @GetMapping("get")
     public ToDo getToDo(ToDo toDo){
         return toDoService.addToDo(toDo);
+    }
+
+    @GetMapping("getAll")
+    public List<ToDo> getAll(){
+        return toDoService.getAll();
     }
 
     @PatchMapping("complete")

@@ -5,6 +5,8 @@ import com.ToDoApp.ToDoApp.Repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class ToDoService {
@@ -23,6 +25,16 @@ public class ToDoService {
 
         return "Success";
     }
+
+    public List<ToDo> getAll(){
+        return toDoRepository.findAll();
+    }
+
+
+    public ToDo update(ToDo toDo, Long id){
+
+    }
+
 
     public String toDeleteById(Long id){
         if(toDoRepository.existsById(id)){
